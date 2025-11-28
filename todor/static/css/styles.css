@@ -1,0 +1,251 @@
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; /*1REM es 10 px*/
+}
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+body{
+      font-family: "Raleway", sans-serif;
+      font-size: 1.6rem;
+      line-height: 2;
+}
+
+/**Globales*/
+h1{
+    font-size: 5rem;
+}
+h2{
+    font-size: 4rem;
+}
+h3{
+    font-size: 3rem;
+}
+h1, h2, h3{
+    font-family: "Playfair Display", serif;
+    margin: 0 0 5rem 0;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+img{
+    max-width: 100%; /*la imagen toma el tamano del contenedor  conten 300 imagen 600 */
+    display: block;
+}
+
+/*UTILIDADES*/
+.max-width{
+    max-width: 30rem;
+    height: 5rem;
+}
+
+.btn{
+    background: hsl(207, 4%, 47%);
+    display: block;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 1rem;
+    transition: background .3s ease-out;
+    border-radius: 5px;
+}
+.btn:hover{
+    background: #373a30;
+}
+
+
+/*Navegacion*/
+.nav-principal{
+    
+    padding: 2rem 0;
+    display: flex;
+    flex-direction:row; /*cuatro posibles valores*/
+    /*en direccion row justify-content es para alinear horizontalmente y align-items es vertical*/
+    justify-content: space-between; /*tiene varios valores*/
+    align-items: center; /*tiene varios valores*/
+    background-color: #000;
+}
+.nav-principal a{
+    color: #fff;
+    font-size: 2.5rem;
+}
+.nav-principal a:hover{
+    color: #ffffff87;
+}
+.nav-principal .nav-link:nth-child(1){
+    margin-right: 3rem;
+}
+
+
+/*Index*/
+.contendio{
+    text-align: center;
+}
+.contendio h1{
+    margin-bottom: 0;
+}
+.contendio .desc{
+    margin-top: 0;
+}
+.contendio .botones{
+    display: flex;
+    justify-content: center;
+}
+.contendio .btn{
+    background: hsl(207, 4%, 47%);
+    display: block;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 1rem;
+    transition: background .3s ease-out;
+    border-radius: 5px;
+}
+.contendio .btn:nth-child(1){
+    margin-right: 3rem;
+}
+.contendio .btn:hover{
+    background: #373a30;
+}
+
+
+/*Registrar*/
+.formulario{
+    max-width: 40rem;
+    margin: 0 auto;
+}
+.formulario fieldset{
+    border: 3px solid black;
+    margin-bottom: 2rem;
+    margin-top: 4rem;
+}
+.formulario legend{
+    background: #434b4f;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+.campo{
+    display: flex;
+    margin-bottom: 2rem;
+}
+.campo label{
+    flex-basis: 16rem;
+}
+.registrar{
+  display: flex;
+  justify-content: center;
+}
+
+/*Mensaje de error cuando ya se encuentra registrado un usuario*/
+.container-error{
+    background-color: #f5bbbb;
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+.container-error p{
+    text-align: center;
+    margin: 0;
+    font-size: 2rem;
+    color: #cf2c2c;
+}
+
+.tabla-tareas {
+  width: 90%;
+  margin: 2rem auto;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.tabla-tareas th, 
+.tabla-tareas td {
+  padding: 1rem 1.5rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  font-size: 1.6rem;
+}
+
+.tabla-tareas th {
+  background-color: #2c3e50;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.tabla-tareas tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* Botones dentro de la tabla */
+.btn-editar {
+  background-color: #3498db;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.btn-eliminar {
+  background-color: #e74c3c;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.btn-editar:hover {
+  background-color: #2980b9;
+}
+
+.btn-eliminar:hover {
+  background-color:#c0392b;
+}
+
+.form-ingresar {
+  max-width: 50rem;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.form-ingresar h3 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: #2c3e50;
+}
+
+.form-ingresar label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-size: 1.6rem;
+  color: #333;
+}
+
+.form-ingresar input[type="text"],
+.form-ingresar textarea {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.6rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+  background-color:#f9f9f9;
+}

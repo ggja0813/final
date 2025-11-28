@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+    <section>
+        <h3>{% block title %}Ingresar Tarea{% endblock %}</h3>
+        <form action="" method="post" class="form-ingresar">
+            <div>
+                <label for="title">Título:</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+
+            <div>
+                <label for="desc">Descripción:</label>
+                <textarea id="desc" name="desc" rows="3"></textarea>
+            </div>
+            <hr>
+            <div>
+                <input type="submit" value="Guardar" class="btn-guardar">
+                <a href="{{ url_for('todo.index') }}" class="btn-cancelar">Cancelar</a>
+            </div>
+        </form>
+    </section>
+{% endblock %}

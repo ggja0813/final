@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+    <section>
+        <h3>{% block title %}Editar Tarea{% endblock %}</h3>
+        <form action="" method="post">
+            <div>
+                <label for="title">Título:</label>
+                <input type="text" id="title" name="title" required value="{{todo.title}}">
+            </div>
+            <div>
+                <label for="desc">Descripción:</label>
+                <textarea id="desc" name="desc" rows="3">{{ todo.desc }}</textarea>
+            </div>
+            <br>
+            <div>
+                <label for="state">Completado:</label>
+                <input type="checkbox" name="state" id="state" {% if todo.state == true %} checked {% endif %}>
+            </div>
+            <hr>
+            <div>
+                <input type="submit" value="Guardar">
+                <a href="{{ url_for('todo.index') }}">Cancelar</a>
+            </div>
+        </form>
+    </section>
+{% endblock %}

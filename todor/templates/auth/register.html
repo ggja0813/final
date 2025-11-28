@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form action="{{ url_for('auth.register') }}" method="post" class="formulario">
+    <fieldset>
+        <legend>Registrar usuario</legend>
+        <div class="campo">
+            <label for="username">Nombre de usuario</label>
+            <input type="text" id="username" name="username" required minlength="4" maxlength="20">
+        </div>
+        <div class="campo">
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" name="password" required minlength="6" maxlength="20">
+        </div>
+        <div class="registrar">
+            <input class="btn" type="submit" value="Registrar usuario">
+        </div>
+    </fieldset>
+</form>
+{% endblock %}
